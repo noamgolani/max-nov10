@@ -21,7 +21,7 @@ async function renderNew(city) {
     const idEl = document.createElement("td");
     nameEl.innerText = agent.full_name;
     idEl.innerText = agent.license_id;
-    agentEl.append(nameEl, idEl);
+    agentEl.append(idEl, nameEl);
     table.append(agentEl);
   });
 }
