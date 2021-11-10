@@ -1,15 +1,17 @@
 import axios from "axios";
 setTimeout(() => {
-	const hebrewCity = 'איתן'
+	const cityH = "%D7%AA%D7%9C%20%D7%90%D7%91%D7%99%D7%91";
 	axios
-		.get(`http://localhost:8080/agents/?city=${hebrewCity}`)
+		.get(`http://localhost:8080/agents/?city=${cityH}`)
 		.then((res) => {
+			console.log(res.data)
 			console.log(`SUCCESS: agents ${res}`);
 		})
 		.catch((err) => {
+			console.log(err.response.data);
 			console.log(`ERROR: agents ${err.message}`);
 		});
-}, 400);
+}, 1000);
 
 //.get("http://localhost:8080/cities")
 //.then((res) => {
